@@ -10,25 +10,26 @@ import android.widget.LinearLayout;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    LinearLayout linearText, linearBtn;
-    Button btnMainActivity;
+    private LinearLayout textLinearLayout;
+    private LinearLayout buttonLinearLayout;
+    private Button nextActivityButton;
 
-    Animation upToDown, downToUp;
+    private Animation upToDown;
+    private Animation downToUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        btnMainActivity = (Button)findViewById(R.id.btnMainActivity);
-        linearBtn = (LinearLayout)findViewById(R.id.linearBtn);
-        linearText = (LinearLayout)findViewById(R.id.linearText);
+        nextActivityButton = (Button)findViewById(R.id.nextActivityButton);
+        buttonLinearLayout = (LinearLayout)findViewById(R.id.buttonLinearLayout);
+        textLinearLayout = (LinearLayout)findViewById(R.id.textLinearLayout);
 
         upToDown = AnimationUtils.loadAnimation(this, R.anim.up_to_down);
         downToUp = AnimationUtils.loadAnimation(this, R.anim.down_to_up);
 
-        linearText.setAnimation(upToDown);
-
-        linearBtn.setAnimation(downToUp);
+        textLinearLayout.setAnimation(upToDown);
+        nextActivityButton.setAnimation(downToUp);
     }
 }
