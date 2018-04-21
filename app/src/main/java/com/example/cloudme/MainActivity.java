@@ -1,9 +1,9 @@
-package com.example.cloudme.cloudme;
+package com.example.cloudme;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.cloudme.R;
+import com.example.cloudme.cloudme.R;
 
 public class MainActivity extends AppCompatActivity {
 
