@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.cloudme.MainActivity"/>
+        <activity android:name="com.example.cloudme.activity.dailyInfoActivity.DailyInfoActivity"/>
+
     </application>
 
 </manifest>
