@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:layout_editor_absoluteY="50dp"
+    android:background="@drawable/background">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/secondMargin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp"
+        >
+
+        <EditText
+            android:id="@+id/inputSearchEditText"
+            android:layout_width="524dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:hint="@string/enter"
+            android:inputType="phone"
+            app:layout_constraintRight_toLeftOf="@+id/progressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/colorAccent"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/inputSearchEditText"
+             />
+
+        <ImageView
+            android:id="@+id/check"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginRight="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/inputSearchEditText"
+            android:src="@drawable/check"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+
+</android.support.constraint.ConstraintLayout>
