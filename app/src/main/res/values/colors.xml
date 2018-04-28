@@ -7,4 +7,5 @@
     <color name="lightOrangeDark">#ebd6ab</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFF</color>
+    <color name="buttonColor">#A6C868</color>
 </resources>
