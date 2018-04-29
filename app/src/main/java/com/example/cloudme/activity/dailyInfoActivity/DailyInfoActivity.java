@@ -17,8 +17,8 @@ public class DailyInfoActivity extends AppCompatActivity {
     private TextView dateTextView;
     private TextView timeTextView;
     private TextView temperatureTextView;
-    private TextView hummidityTextView;
-    private TextView preasureTextView;
+    private TextView humidityTextView;
+    private TextView preassureTextView;
     private ImageView cloudinaryImageView;
 
     @Override
@@ -30,13 +30,8 @@ public class DailyInfoActivity extends AppCompatActivity {
         dateTextView = findViewById(R.id.dateTextView);
         timeTextView = findViewById(R.id.timeTextView);
         temperatureTextView = findViewById(R.id.temperatureTextView);
-        hummidityTextView = findViewById(R.id.hummidityTextView);
-        preasureTextView = findViewById(R.id.preasureTextView);
+        humidityTextView = findViewById(R.id.humidityTextView);
+        preassureTextView = findViewById(R.id.preassureTextView);
         cloudinaryImageView = findViewById(R.id.cloudinaryImageView);
-
-
-
-
-
     }
 }

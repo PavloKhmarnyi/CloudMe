@@ -16,7 +16,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-
     <TextView
         android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
@@ -39,7 +38,6 @@
         app:layout_constraintStart_toEndOf="@+id/dateTextView"
         app:layout_constraintTop_toBottomOf="@+id/cityTextView" />
 
-
     <TextView
         android:id="@+id/temperatureTextView"
         android:layout_width="wrap_content"
@@ -52,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/timeTextView" />
 
     <TextView
-        android:id="@+id/hummidityTextView"
+        android:id="@+id/humidityTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="75%"
@@ -63,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@+id/temperatureTextView" />
 
     <TextView
-        android:id="@+id/preasureTextView"
+        android:id="@+id/preassureTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="750 mm"
@@ -71,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hummidityTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/humidityTextView" />
 
     <ImageView
         android:id="@+id/cloudinaryImageView"
@@ -81,7 +79,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/preasureTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/preassureTextView"
+        android:contentDescription="TODO" />
 
 </android.support.constraint.ConstraintLayout>
 
