@@ -26,8 +26,6 @@ public class WelcomeActivity extends AppCompatActivity {
     private Animation upToDown;
     private Animation downToUp;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +58,7 @@ public class WelcomeActivity extends AppCompatActivity {
         if (requestCode == Config.PERMISSION_REQUEST_CODE && grantResults.length == 2 && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED ){
            // Intent intent = new Intent(this, NextActivity.class)
             //startActivity(intent)
-        }else{
+        } else {
             Toast.makeText(this, "Permission not allowed",Toast.LENGTH_SHORT).show();
         }
     }
