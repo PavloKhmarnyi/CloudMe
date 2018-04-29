@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CloudMe</string>
+    <string name="enter">Enter</string>
+    <string name="hello">hello</string>
     <string name="welcome_message">Welcome to our app!</string>
     <string name="continue_message">Continue</string>
 </resources>
