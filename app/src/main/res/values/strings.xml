@@ -4,4 +4,8 @@
     <string name="hello">hello</string>
     <string name="welcome_message">Welcome to our app!</string>
     <string name="continue_message">Continue</string>
+    <string name="search_city">Search city</string>
+    <string name="search_city">Search city</string>
+    <string name="show_weather">Show Weather</string>
+    <string name="result">Result</string>
 </resources>
