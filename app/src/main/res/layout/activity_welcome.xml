@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.cloudme.activity.welcomeActivity.WelcomeActivity"
     android:orientation="vertical"
-    android:background="@drawable/welcome_activity_background">
     android:background="#0D0C1C">
 
     <LinearLayout
