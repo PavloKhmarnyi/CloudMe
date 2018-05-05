@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+        <TextView
+            android:id="@+id/gradesTextView"
+            android:layout_width="81dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="66dp"
+            android:text="25°C"
+            android:textColor="@color/textColor1"
+            android:textSize="32dp"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/weatherSignTextView"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="95dp"
+            android:background="@drawable/sun"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/humidityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="66dp"
+            android:text="34%"
+            android:textColor="@color/textColor1"
+            android:textSize="32dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/humiditySignTextView"
+            android:layout_width="112dp"
+            android:layout_height="108dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="124dp"
+            android:background="@drawable/drop"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@id/weatherSignTextView"
+            android:layout_marginTop="10dp">
+
+            <android.support.v7.app.AlertController.RecycleListView
+                android:id="@+id/weatherRecyclerView">
+
+            </android.support.v7.app.AlertController.RecycleListView>
+
+
+        </TableLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!--<android.support.v7.app.AlertController.RecycleListView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+        <!---->
+    <!--</android.support.v7.app.AlertController.RecycleListView>-->
+</ScrollView>

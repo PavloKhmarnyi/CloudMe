@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.cloudme.cloudme.WelcomeActivity"
+    tools:context="com.example.cloudme.activity.welcomeActivity.WelcomeActivity"
     android:orientation="vertical"
     android:background="@drawable/background">
     <LinearLayout
