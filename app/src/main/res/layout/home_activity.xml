@@ -48,6 +48,16 @@
             app:layout_constraintLeft_toRightOf="@+id/inputSearchEditText"
             android:src="@drawable/check"
             />
+        <ImageView
+            android:id="@+id/error"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginRight="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/inputSearchEditText"
+            android:src="@drawable/error"
+            />
 
     </android.support.constraint.ConstraintLayout>
 
