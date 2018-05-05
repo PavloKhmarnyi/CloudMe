@@ -3,5 +3,5 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/twisted_circle"/>
+        android:font="@font/twisted_circle_f"/>
 </font-family>
