@@ -7,4 +7,11 @@
     <string name="search_city">Search city</string>
     <string name="show_weather">Show Weather</string>
     <string name="result">Result</string>
+    <string name="_21_02_2010">21.02.2010</string>
+    <string name="ternopil">Ternopil</string>
+    <string name="_21_00_pm">21:00 PM</string>
+    <string name="_21_u2103">21 ℃</string>
+    <string name="_75">75%</string>
+    <string name="_750_mm">750 mm</string>
+    <string name="city_is_not_found">City is not found</string>
 </resources>
