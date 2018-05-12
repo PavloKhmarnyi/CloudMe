@@ -1,0 +1,15 @@
+package com.example.cloudme.activity.homeActivity;
+
+/**
+ * Created by Illya Havrulyk on 5/5/2018.
+ */
+
+public interface HomeActivityView {
+    void showErrorMessage();
+    void hideErrorMessage();
+    void hideSuccessMessage();
+    void showSuccessMessage();
+    void showUserLoadingProgressBar();
+    void hideUserLoadingProgressBar();
+    void enablesearchCityButton();
+}

@@ -39,15 +39,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <Button
             android:id="@+id/nextActivityButton"
             android:layout_width="400dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/button_style"
-            android:textSize="20dp"
             android:text="@string/continue_message"
-            android:textColor="@color/buttonColor"/>
+            android:textColor="@color/buttonColor"
+            android:textSize="20dp" />
     </LinearLayout>
 
 </LinearLayout>

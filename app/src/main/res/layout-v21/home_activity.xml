@@ -68,24 +68,26 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeActivityHeadSeparator">
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/homeActivityHeadSeparator"
+        tools:layout_editor_absoluteX="32dp">
 
         <TextView
             android:id="@+id/resultMessageTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:maxLines="2"
             android:text="@string/result"
             android:textColor="@color/buttonColor"
             android:textSize="45sp"
-            app:layout_constraintBottom_toTopOf="@+id/searchCity"
+            app:layout_constraintBottom_toTopOf="@+id/searchCityButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:maxLines="2"/>
-            
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
-            android:id="@+id/searchCity"
+            android:id="@+id/searchCityButton"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_style"
@@ -100,7 +102,7 @@
             app:layout_constraintVertical_bias="0.5" />
 
         <Button
-            android:id="@+id/showWeather"
+            android:id="@+id/showWeatherButton"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -112,7 +114,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchCity" />
+            app:layout_constraintTop_toBottomOf="@+id/searchCityButton" />
     </android.support.constraint.ConstraintLayout>
 
 
