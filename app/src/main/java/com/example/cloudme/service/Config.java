@@ -5,4 +5,5 @@ package com.example.cloudme.service;
  */
 
 public class Config {
+    public static final String GOOGLE_API_URL = "https://maps.googleapis.com/maps/api/geocode";
 }
