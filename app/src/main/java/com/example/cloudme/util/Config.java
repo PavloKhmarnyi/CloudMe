@@ -5,4 +5,5 @@ package com.example.cloudme.util;
  */
 
 public class Config {
+    public static final int PERMISSION_REQUEST_CODE = 0;
 }
