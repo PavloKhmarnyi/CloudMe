@@ -11,5 +11,5 @@ public interface IHomeView {
     void showSuccessMessage();
     void showUserLoadingProgressBar();
     void hideUserLoadingProgressBar();
-    void enablesearchCityButton();
+    void enableSearchCityButton();
 }

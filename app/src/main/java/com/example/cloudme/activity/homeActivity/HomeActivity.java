@@ -51,7 +51,7 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
     }
 
     @Override
-    public void enablesearchCityButton() {
+    public void enableSearchCityButton() {
 
     }
 }
