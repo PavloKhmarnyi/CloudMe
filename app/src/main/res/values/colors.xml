@@ -10,4 +10,5 @@
     <color name="lightOrangeDark">#ebd6ab</color>
     <color name="white">#FFF</color>
     <color name="buttonColor">#A6C868</color>
+    <color name="primaryErrorColor">#FF0800</color>
 </resources>
