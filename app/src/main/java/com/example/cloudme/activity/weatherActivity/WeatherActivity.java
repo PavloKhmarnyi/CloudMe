@@ -1,7 +1,6 @@
 package com.example.cloudme.activity.weatherActivity;
 
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,6 +23,7 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_weather);
 
         weatherRecyclerView = findViewById(R.id.weatherRecyclerView);
         weatherRecyclerView.setLayoutManager(new LinearLayoutManager(WeatherActivity.this));
@@ -34,6 +34,5 @@ public class WeatherActivity extends AppCompatActivity {
 
             }
         });
-
     }
 }
