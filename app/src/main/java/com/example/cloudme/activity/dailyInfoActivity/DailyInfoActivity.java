@@ -33,7 +33,7 @@ public class DailyInfoActivity extends AppCompatActivity implements IDailyInfoVi
         timeTextView = findViewById(R.id.timeTextView);
         temperatureTextView = findViewById(R.id.temperatureTextView);
         humidityTextView = findViewById(R.id.humidityTextView);
-        preassureTextView = findViewById(R.id.preassureTextView);
+        preassureTextView = findViewById(R.id.pressureTextView);
         cloudinaryImageView = findViewById(R.id.cloudinaryImageView);
 
         presenter = new DailyInfoPresenter(this);
