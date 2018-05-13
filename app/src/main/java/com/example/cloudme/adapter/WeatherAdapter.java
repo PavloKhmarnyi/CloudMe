@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * Created by localhost on 5/5/2018.
  */
 
-public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHolder>{
+public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHolder> {
     private final OnWeatherItemClickListener listener;
     private LayoutInflater inflater;
     private Context context;
@@ -39,10 +39,8 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-
         public ViewHolder(View itemView) {
             super(itemView);
-
         }
     }
 }
