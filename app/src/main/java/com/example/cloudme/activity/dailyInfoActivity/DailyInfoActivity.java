@@ -11,7 +11,7 @@ import com.example.cloudme.cloudme.R;
  * Created by ITHouseUser4 on 4/28/2018.
  */
 
-public class DailyInfoActivity extends AppCompatActivity {
+public class DailyInfoActivity extends AppCompatActivity implements IDailyInfoView {
 
     private TextView cityTextView;
     private TextView dateTextView;
@@ -20,6 +20,8 @@ public class DailyInfoActivity extends AppCompatActivity {
     private TextView humidityTextView;
     private TextView preassureTextView;
     private ImageView cloudinaryImageView;
+
+    private IDailyInfoPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +35,17 @@ public class DailyInfoActivity extends AppCompatActivity {
         humidityTextView = findViewById(R.id.humidityTextView);
         preassureTextView = findViewById(R.id.preassureTextView);
         cloudinaryImageView = findViewById(R.id.cloudinaryImageView);
+
+        presenter = new DailyInfoPresenter(this);
+    }
+
+    @Override
+    public void showErrorHomeTextView() {
+
+    }
+
+    @Override
+    public void hideErrorHomeTextView() {
+
     }
 }

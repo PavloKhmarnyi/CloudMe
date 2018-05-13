@@ -8,7 +8,4 @@ public interface IHomePresenter {
      boolean isFieldEmpty(String cityName);
      void fetchCoordinatesFromGoogle (String cityName);
      void fetchWeatherFromOpenWeather (long lat, long lon);
-
-
-
 }

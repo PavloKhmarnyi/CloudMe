@@ -4,7 +4,7 @@ package com.example.cloudme.activity.homeActivity;
  * Created by Illya Havrulyk on 5/5/2018.
  */
 
-public interface HomeActivityView {
+public interface IHomeView {
     void showErrorMessage();
     void hideErrorMessage();
     void hideSuccessMessage();

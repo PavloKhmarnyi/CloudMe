@@ -9,7 +9,7 @@ import com.example.cloudme.cloudme.R;
  * Created by Slavik on 21.04.2018.
  */
 
-public class HomeActivity extends AppCompatActivity implements HomeActivityView {
+public class HomeActivity extends AppCompatActivity implements IHomeView {
 
     private IHomePresenter presenter;
 

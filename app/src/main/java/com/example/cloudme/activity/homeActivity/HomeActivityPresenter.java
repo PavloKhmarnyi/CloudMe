@@ -6,9 +6,9 @@ package com.example.cloudme.activity.homeActivity;
 
 public class HomeActivityPresenter implements IHomePresenter {
 
-    private HomeActivityView view;
+    private IHomeView view;
 
-    public HomeActivityPresenter(HomeActivityView view) {
+    public HomeActivityPresenter(IHomeView view) {
         this.view = view;
     }
 
