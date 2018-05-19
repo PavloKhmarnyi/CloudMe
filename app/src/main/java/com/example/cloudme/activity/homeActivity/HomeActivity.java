@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.example.cloudme.cloudme.R;
 
@@ -15,6 +18,12 @@ import com.example.cloudme.cloudme.R;
 public class HomeActivity extends AppCompatActivity implements IHomeView {
     private EditText inputSearchEditText;
     private Button searchCity;
+    private Button showWeather;
+    private ProgressBar progressBar;
+    private ImageView check;
+    private ImageView error;
+    private TextView resultMessageTextView;
+    private TextView ErrorHomeTextView;
 
     private IHomePresenter presenter;
 
@@ -27,6 +36,15 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         presenter = new HomeActivityPresenter(this);
 
         inputSearchEditText = findViewById(R.id.inputSearchEditText);
+        searchCity = findViewById(R.id.searchCity);
+        showWeather = findViewById(R.id.showWeather);
+        progressBar = findViewById(R.id.progressBar);
+        check = findViewById(R.id.check);
+        error = findViewById(R.id.error);
+        resultMessageTextView = findViewById(R.id.resultMessageTextView);
+        ErrorHomeTextView = findViewById(R.id.ErrorHomeTextView);
+
+
 
         searchCity.setOnClickListener(new View.OnClickListener() {
             @Override
