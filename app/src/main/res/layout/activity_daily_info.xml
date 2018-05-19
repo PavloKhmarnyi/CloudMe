@@ -27,6 +27,19 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/dateLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="6dp"
+            android:text="@string/date"
+            android:textColor="@color/buttonColor"
+            android:textSize="25sp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/cityTextView"
+            app:layout_constraintRight_toLeftOf="@id/dateTextView"/>
+
+        <TextView
             android:id="@+id/dateTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +50,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cityTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/cityTextView"
+            />
+
+        <TextView
+            android:id="@+id/timeLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="@string/time"
+            android:textColor="@color/buttonColor"
+            android:textSize="25sp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView"
+            app:layout_constraintRight_toLeftOf="@id/timeTextView"/>
 
         <TextView
             android:id="@+id/timeTextView"
@@ -47,9 +73,20 @@
             android:textColor="@color/buttonColor"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+        <TextView
+            android:id="@+id/temperatureLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/temperature"
+            android:textColor="@color/buttonColor"
+            android:textSize="28sp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/timeTextView"
+            app:layout_constraintRight_toLeftOf="@id/temperatureTextView" />
 
         <TextView
             android:id="@+id/temperatureTextView"
@@ -87,6 +124,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/humidityTextView" />
 
+        <TextView
+            android:id="@+id/windSpeedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5.1 m/sec"
+            android:textColor="@color/buttonColor"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pressureTextView" />
+
         <ImageView
             android:id="@+id/cloudinaryImageView"
             android:layout_width="wrap_content"
@@ -95,7 +144,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pressureTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/windSpeedTextView" />
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
