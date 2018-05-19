@@ -2,6 +2,9 @@ package com.example.cloudme.activity.homeActivity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.cloudme.cloudme.R;
 
@@ -10,14 +13,27 @@ import com.example.cloudme.cloudme.R;
  */
 
 public class HomeActivity extends AppCompatActivity implements IHomeView {
+    private EditText inputSearchEditText;
+    private Button searchCity;
 
     private IHomePresenter presenter;
+
+    private String cityName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
         presenter = new HomeActivityPresenter(this);
+
+        inputSearchEditText = findViewById(R.id.inputSearchEditText);
+
+        searchCity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cityName = inputSearchEditText.getText().toString();
+            }
+        });
     }
 
     @Override
