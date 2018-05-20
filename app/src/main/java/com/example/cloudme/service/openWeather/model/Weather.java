@@ -8,9 +8,13 @@ public class Weather {
 
     private int id;
 
-    private String main;//Group of weather parameters (Rain, Snow, Extreme etc.)
+    /** Group of weather parameters (Rain, Snow, Extreme etc.) */
+    private String main;
 
     private String description;
+
+    /** Weather icon id */
+    private char icon;
 
     public int getId() {
         return id;
@@ -43,8 +47,4 @@ public class Weather {
     public void setIcon(char icon) {
         this.icon = icon;
     }
-
-    private char icon;//Weather icon id
-
-
 }

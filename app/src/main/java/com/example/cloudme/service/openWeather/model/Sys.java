@@ -5,6 +5,10 @@ package com.example.cloudme.service.openWeather.model;
  */
 
 public class Sys {
+
+    /** In json respond there was0pod: 'd' */
+    private char pod;
+
     public char getPod() {
         return pod;
     }
@@ -12,6 +16,4 @@ public class Sys {
     public void setPod(char pod) {
         this.pod = pod;
     }
-
-    private char pod;//In json respond there was0pod: 'd'
 }

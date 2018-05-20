@@ -24,16 +24,17 @@ public class OpenWeatherService {
         }
 
         return INSTANCE;
-
     }
 
-    private OpenWeatherService(){openWeatherApi = initOpenWeatherApi();}
+    private OpenWeatherService(){
+        openWeatherApi = initOpenWeatherApi();
+    }
 
     public OpenWeatherApi getOpenWeatherApi(){
         return openWeatherApi;
     }
 
-    public static OpenWeatherApi initOpenWeatherApi(){
+    private static OpenWeatherApi initOpenWeatherApi(){
         return  getRetrofit().create(OpenWeatherApi.class);
     }
 

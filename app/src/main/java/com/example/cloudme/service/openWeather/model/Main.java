@@ -13,6 +13,28 @@ public class Main {
     @SerializedName("temp_min")
     private int tempMin;
 
+    @SerializedName("temp_max")
+    private int tempMax;
+
+    private int pressure;
+
+    @SerializedName("sea_level")
+    private int seaLevel;
+
+    /**
+     * Atmospheric pressure on the ground level, hPa
+     */
+    @SerializedName("grnd_level")
+    private int grndLevel;
+
+    private int humidity;
+
+    /**
+     * Internal parameter
+     */
+    @SerializedName("temp_kf")
+    private int tempKf;
+
     public int getTemp() {
         return temp;
     }
@@ -76,20 +98,4 @@ public class Main {
     public void setTempKf(int tempKf) {
         this.tempKf = tempKf;
     }
-
-    @SerializedName("temp_max")
-    private int tempMax;
-
-    private int pressure;
-
-    @SerializedName("sea_level")
-    private int seaLevel;
-
-    @SerializedName("grnd_level")//Atmospheric pressure on the ground level, hPa
-    private int grndLevel;
-
-    private int humidity;
-
-    @SerializedName("temp_kf")//Internal parameter
-    private int tempKf;
 }

@@ -10,7 +10,9 @@ public class WeatherData {
 
     private int cod;
 
-    private List<WeatherItem> weatherItem;
+    private String message;
+
+    private List<WeatherItem> weatherItems;
 
     private  City city;
 
@@ -22,12 +24,20 @@ public class WeatherData {
         this.cod = cod;
     }
 
-    public List<WeatherItem> getWeatherItem() {
-        return weatherItem;
+    public String getMessage() {
+        return message;
     }
 
-    public void setWeatherItem(List<WeatherItem> weatherItem) {
-        this.weatherItem = weatherItem;
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public List<WeatherItem> getWeatherItems() {
+        return weatherItems;
+    }
+
+    public void setWeatherItems(List<WeatherItem> weatherItems) {
+        this.weatherItems = weatherItems;
     }
 
     public City getCity() {

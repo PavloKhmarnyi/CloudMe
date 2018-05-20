@@ -10,6 +10,10 @@ public class City {
 
     private String name;
 
+    private String country;
+
+    private Coordinates coordinates;
+
     public long getId() {
         return id;
     }
@@ -34,5 +38,11 @@ public class City {
         this.country = country;
     }
 
-    private String country;
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(Coordinates coordinates) {
+        this.coordinates = coordinates;
+    }
 }

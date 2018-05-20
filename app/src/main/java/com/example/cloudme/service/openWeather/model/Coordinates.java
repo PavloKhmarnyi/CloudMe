@@ -8,6 +8,8 @@ public class Coordinates {
 
     private double lat;
 
+    private double lon;
+
     public double getLat() {
         return lat;
     }
@@ -24,5 +26,4 @@ public class Coordinates {
         this.lon = lon;
     }
 
-    private double lon;
 }

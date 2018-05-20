@@ -8,8 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class Rain {
 
+    /** Precipitation volume for last 3 hours */
     @SerializedName("3h")
-    private double lastThreeHours;//Precipitation volume for last 3 hours
+    private double lastThreeHours;
 
     public double getLastThreeHours() {
         return lastThreeHours;

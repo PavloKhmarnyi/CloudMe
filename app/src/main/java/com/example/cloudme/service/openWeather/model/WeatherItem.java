@@ -16,19 +16,79 @@ public class WeatherItem {
     @SerializedName("dt_txt")
     private long DateTimeTxt;
 
-    private City city;
+    private Main main;
+
+    private List<Weather> weatherList;
 
     private Clouds clouds;
 
-    private Coordinates coordinates;
-
-    private Main main;
+    private Wind wind;
 
     private Rain rain;
 
     private Sys sys;
 
-    private List<Weather> weatherList;
+    public long getDateTime() {
+        return dateTime;
+    }
 
-    private Wind wind;
+    public void setDateTime(long dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    public long getDateTimeTxt() {
+        return DateTimeTxt;
+    }
+
+    public void setDateTimeTxt(long dateTimeTxt) {
+        DateTimeTxt = dateTimeTxt;
+    }
+
+    public Main getMain() {
+        return main;
+    }
+
+    public void setMain(Main main) {
+        this.main = main;
+    }
+
+    public List<Weather> getWeatherList() {
+        return weatherList;
+    }
+
+    public void setWeatherList(List<Weather> weatherList) {
+        this.weatherList = weatherList;
+    }
+
+    public Clouds getClouds() {
+        return clouds;
+    }
+
+    public void setClouds(Clouds clouds) {
+        this.clouds = clouds;
+    }
+
+    public Wind getWind() {
+        return wind;
+    }
+
+    public void setWind(Wind wind) {
+        this.wind = wind;
+    }
+
+    public Rain getRain() {
+        return rain;
+    }
+
+    public void setRain(Rain rain) {
+        this.rain = rain;
+    }
+
+    public Sys getSys() {
+        return sys;
+    }
+
+    public void setSys(Sys sys) {
+        this.sys = sys;
+    }
 }
