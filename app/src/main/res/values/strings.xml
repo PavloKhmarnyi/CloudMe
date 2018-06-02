@@ -15,7 +15,9 @@
     <string name="_750_mm">750 mm</string>
     <string name="city_is_not_found">City is not found</string>
     <string name="date">Date:</string>
-    <string name="date">Date:</string>
     <string name="time">Time:</string>
     <string name="temperature">Temperature:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="pressure">Pressure:</string>
+    <string name="wind_speed">Wind speed:</string>
 </resources>

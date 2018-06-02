@@ -47,6 +47,7 @@
             android:text="@string/_21_02_2010"
             android:textColor="@color/buttonColor"
             android:textSize="25sp"
+            android:layout_marginLeft="90dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,6 +73,7 @@
             android:text="@string/_21_00_pm"
             android:textColor="@color/buttonColor"
             android:textSize="25sp"
+            android:layout_marginLeft="90dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
@@ -84,6 +86,7 @@
             android:text="@string/temperature"
             android:textColor="@color/buttonColor"
             android:textSize="28sp"
+            android:layout_marginLeft="90dp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintTop_toBottomOf="@+id/timeTextView"
             app:layout_constraintRight_toLeftOf="@id/temperatureTextView" />
@@ -95,10 +98,24 @@
             android:text="@string/_21_u2103"
             android:textColor="@color/buttonColor"
             android:textSize="28sp"
+            android:layout_marginLeft="90dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/timeTextView" />
+
+
+        <TextView
+            android:id="@+id/humidityLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/humidity"
+            android:textColor="@color/buttonColor"
+            android:textSize="28sp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureTextView"
+            app:layout_constraintRight_toLeftOf="@id/humidityTextView" />
 
         <TextView
             android:id="@+id/humidityTextView"
@@ -107,10 +124,23 @@
             android:text="@string/_75"
             android:textColor="@color/buttonColor"
             android:textSize="30sp"
+            android:layout_marginLeft="90dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/temperatureTextView" />
+
+        <TextView
+            android:id="@+id/pressureLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pressure"
+            android:textColor="@color/buttonColor"
+            android:textSize="26sp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/humidityTextView"
+            app:layout_constraintRight_toLeftOf="@id/pressureTextView" />
 
         <TextView
             android:id="@+id/pressureTextView"
@@ -119,10 +149,23 @@
             android:text="@string/_750_mm"
             android:textColor="@color/buttonColor"
             android:textSize="26sp"
+            android:layout_marginLeft="90dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/humidityTextView" />
+
+        <TextView
+            android:id="@+id/windSpeedLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wind_speed"
+            android:textColor="@color/buttonColor"
+            android:textSize="26sp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/pressureTextView"
+            app:layout_constraintRight_toLeftOf="@id/windSpeedTextView" />
 
         <TextView
             android:id="@+id/windSpeedTextView"
@@ -131,6 +174,7 @@
             android:text="5.1 m/sec"
             android:textColor="@color/buttonColor"
             android:textSize="26sp"
+            android:layout_marginLeft="90dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -142,6 +186,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/windSpeedTextView" />

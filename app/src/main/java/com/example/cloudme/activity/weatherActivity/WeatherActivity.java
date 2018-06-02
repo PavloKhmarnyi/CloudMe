@@ -25,7 +25,7 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 
-        weatherRecyclerView = findViewById(R.id.weatherRecyclerView);
+       // weatherRecyclerView = findViewById(R.id.weatherRecyclerView);
         weatherRecyclerView.setLayoutManager(new LinearLayoutManager(WeatherActivity.this));
 
         weatherAdapter = new WeatherAdapter(WeatherActivity.this, weathersList, new OnWeatherItemClickListener() {
