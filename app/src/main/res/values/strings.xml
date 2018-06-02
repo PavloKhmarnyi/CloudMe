@@ -13,5 +13,7 @@
     <string name="_21_u2103">21 ℃</string>
     <string name="_75">75%</string>
     <string name="_750_mm">750 mm</string>
+    <string name="fields_are_empty">Fields are empty</string>
     <string name="city_is_not_found">City is not found</string>
+    <string name="weather_is_not_found">Weather is not found</string>
 </resources>
