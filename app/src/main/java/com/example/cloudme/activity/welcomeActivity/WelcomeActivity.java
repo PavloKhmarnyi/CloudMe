@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -25,10 +26,14 @@ public class WelcomeActivity extends AppCompatActivity {
     private Animation upToDown;
     private Animation downToUp;
 
+    private Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
+        intent = new Intent(this, HomeActivity.class);
 
         nextActivityButton = (Button) findViewById(R.id.nextActivityButton);
         buttonLinearLayout = (LinearLayout) findViewById(R.id.buttonLinearLayout);
@@ -39,6 +44,13 @@ public class WelcomeActivity extends AppCompatActivity {
 
         textLinearLayout.setAnimation(upToDown);
         nextActivityButton.setAnimation(downToUp);
+
+        nextActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -60,4 +72,6 @@ public class WelcomeActivity extends AppCompatActivity {
             Toast.makeText(this, "Permission not allowed",Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }

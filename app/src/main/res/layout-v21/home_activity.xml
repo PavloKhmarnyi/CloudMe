@@ -22,7 +22,8 @@
             android:backgroundTint="@color/colorAccent"
             android:hint="@string/enter"
             android:textColorHint="@color/colorAccent"
-            android:inputType="phone"
+            android:textColor="@color/colorTextPrimary"
+            android:inputType="text"
             app:layout_constraintRight_toLeftOf="@+id/progressBar"
             app:layout_constraintStart_toStartOf="parent" />
 

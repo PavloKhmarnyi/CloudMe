@@ -7,18 +7,23 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.cloudme.cloudme.R;
+import com.example.cloudme.service.google.api.GoogleDataApi;
+import com.example.cloudme.service.google.api.GoogleDataService;
 
 /**
  * Created by Slavik on 21.04.2018.
  */
 
 public class HomeActivity extends AppCompatActivity implements IHomeView {
+
     private EditText inputSearchEditText;
     private Button searchCity;
 
     private IHomePresenter presenter;
 
     private String cityName;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +33,21 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
 
         inputSearchEditText = findViewById(R.id.inputSearchEditText);
 
+        searchCity = findViewById(R.id.searchCity);
+
         searchCity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 cityName = inputSearchEditText.getText().toString();
+                if(!presenter.isFieldEmpty(cityName)){
+                    presenter.fetchCoordinatesFromGoogle(cityName);
+                }else{
+                    showErrorMessage();
+                }
+
             }
         });
+
     }
 
     @Override
@@ -68,6 +82,11 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
 
     @Override
     public void enableSearchCityButton() {
+
+    }
+
+    @Override
+    public void disableSearchCityButton() {
 
     }
 }
