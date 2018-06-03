@@ -13,17 +13,12 @@ public class HomeActivityPresenter implements IHomePresenter {
     }
 
     @Override
-    public boolean isFieldEmpty(String cityName) {
-        return false;
-    }
-
-    @Override
     public void fetchCoordinatesFromGoogle(String cityName) {
 
     }
 
     @Override
-    public void fetchWeatherFromOpenWeather(long lat, long lon) {
+    public void fetchWeatherFromOpenWeather(long latitude, long longitude) {
 
     }
 }

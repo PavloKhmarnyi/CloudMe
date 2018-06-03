@@ -5,11 +5,19 @@ package com.example.cloudme.activity.homeActivity;
  */
 
 public interface IHomeView {
-    void showErrorMessage();
-    void hideErrorMessage();
-    void hideSuccessMessage();
+    void showCityNotFoundErrorMessage();
+    void hideCityNotFoundErrorMessage();
+    void showWeatherNotFoundErrorMessage();
+    void hideWeatherNotFoundErrorMessage();
+    void showFieldIsEmptyErrorMessage();
+    void hideFieldIsEmptyErrorMessage();
     void showSuccessMessage();
-    void showUserLoadingProgressBar();
-    void hideUserLoadingProgressBar();
+    void hideSuccessMessage();
+    void showHomeActivityProgressBar();
+    void hideHomeActivityProgressBar();
     void enableSearchCityButton();
+    void disableSearchCityButton();
+    void enableSearchWeatherButton();
+    void disableSearchWeatherButton();
+    boolean isFieldEmpty();
 }
