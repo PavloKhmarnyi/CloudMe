@@ -49,15 +49,20 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
             @Override
             public void onClick(View view) {
                 cityName = searchCityEditText.getText().toString();
+                if (!isFieldEmpty()) {
+                    presenter.fetchCoordinatesFromGoogle("Ternopil");
+                } else {
+                    showCityNotFoundErrorMessage();
+                }
             }
         });
     }
 
     @Override
-    public void showSuccessMessage() {
+    public void showSuccessMessage(String message) {
         checkImageView.setVisibility(View.VISIBLE);
         resultMessageTextView.setVisibility(View.VISIBLE);
-        resultMessageTextView.setText(getResources().getText(R.string.success));
+        resultMessageTextView.setText(message);
         Toast.makeText(this, getResources().getText(R.string.success), Toast.LENGTH_SHORT).show();
     }
 
@@ -66,6 +71,20 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         checkImageView.setVisibility(View.INVISIBLE);
         resultMessageTextView.setVisibility(View.INVISIBLE);
         resultMessageTextView.setText("");
+    }
+
+    @Override
+    public void showErrorMessage(String errorMessage) {
+        resultMessageTextView.setVisibility(View.INVISIBLE);
+        errorHomeTextView.setVisibility(View.VISIBLE);
+        errorHomeTextView.setText(errorMessage);
+        Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void hideErrorMessage() {
+        errorHomeTextView.setVisibility(View.INVISIBLE);
+        errorHomeTextView.setText("");
     }
 
     @Override
@@ -150,7 +169,7 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
 
     @Override
     public boolean isFieldEmpty() {
-        return searchCityEditText.getText().toString() != null &&
-                !searchCityEditText.getText().toString().equals("");
+        return searchCityEditText.getText().toString() == null &&
+                searchCityEditText.getText().toString().equals("");
     }
 }

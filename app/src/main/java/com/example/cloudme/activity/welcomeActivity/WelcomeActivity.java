@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -39,6 +40,14 @@ public class WelcomeActivity extends AppCompatActivity {
 
         textLinearLayout.setAnimation(upToDown);
         nextActivityButton.setAnimation(downToUp);
+
+        nextActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WelcomeActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

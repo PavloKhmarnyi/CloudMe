@@ -12,6 +12,6 @@ import retrofit2.http.Query;
  */
 
 public interface GoogleDataApi {
-    @GET("/json")
+    @GET("maps/api/geocode/json")
     Call<GoogleData> fetchGoogleData(@Query("address") String address);
 }
