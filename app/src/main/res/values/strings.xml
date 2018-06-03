@@ -5,7 +5,7 @@
     <string name="welcome_message">Welcome to our app!</string>
     <string name="continue_message">Continue</string>
     <string name="search_city">Search city</string>
-    <string name="show_weather">Show Weather</string>
+    <string name="search_weather">Search Weather</string>
     <string name="result">Result</string>
     <string name="_21_02_2010">21.02.2010</string>
     <string name="ternopil">Ternopil</string>
@@ -13,7 +13,10 @@
     <string name="_21_u2103">21 ℃</string>
     <string name="_75">75%</string>
     <string name="_750_mm">750 mm</string>
-    <string name="fields_are_empty">Fields are empty</string>
+    <string name="success">SUCCESS</string>
+    <string name="field_is_empty">Field is empty</string>
     <string name="city_is_not_found">City is not found</string>
+    <string name="city_is_found">City is found</string>
     <string name="weather_is_not_found">Weather is not found</string>
+    <string name="weather_is_found">Weather is found</string>
 </resources>

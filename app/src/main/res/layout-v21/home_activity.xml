@@ -15,7 +15,7 @@
         tools:layout_editor_absoluteY="0dp">
 
         <EditText
-            android:id="@+id/inputSearchEditText"
+            android:id="@+id/searchCityEditText"
             android:layout_width="524dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="11dp"
@@ -23,18 +23,18 @@
             android:hint="@string/enter"
             android:textColorHint="@color/colorAccent"
             android:inputType="phone"
-            app:layout_constraintRight_toLeftOf="@+id/progressBar"
+            app:layout_constraintRight_toLeftOf="@+id/homeActivityProgressBar"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ProgressBar
-            android:id="@+id/progressBar"
+            android:id="@+id/homeActivityProgressBar"
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="12dp"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/inputSearchEditText" />
+            app:layout_constraintLeft_toRightOf="@+id/searchCityEditText" />
 
         <ImageView
             android:id="@+id/checkImageView"
@@ -44,7 +44,7 @@
             android:src="@drawable/check"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/inputSearchEditText" />
+            app:layout_constraintLeft_toRightOf="@+id/searchCityEditText" />
 
         <ImageView
             android:id="@+id/errorImageView"
@@ -54,7 +54,7 @@
             android:src="@drawable/error"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/inputSearchEditText" />
+            app:layout_constraintLeft_toRightOf="@+id/searchCityEditText" />
     </android.support.constraint.ConstraintLayout>
 
     <View
@@ -84,14 +84,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:maxLines="2"
-            android:visibility="visible"/>
+            android:visibility="invisible"/>
 
         <TextView
             android:id="@+id/errorHomeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/city_is_not_found"
-            android:textColor="@color/buttonColor"
+            android:textColor="@color/primaryErrorColor"
             android:textSize="45sp"
             app:layout_constraintBottom_toTopOf="@+id/searchCityButton"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +101,6 @@
             android:maxLines="2"
             android:visibility="invisible"/>
 
-            
         <Button
             android:id="@+id/searchCityButton"
             android:layout_width="250dp"
@@ -118,21 +117,18 @@
             app:layout_constraintVertical_bias="0.5" />
 
         <Button
-            android:id="@+id/showWeather"
+            android:id="@+id/searchWeatherButton"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/button_style"
             android:enabled="false"
-            android:text="@string/show_weather"
+            android:text="@string/search_weather"
             android:textColor="@color/buttonColor"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchCityButton" />
-
     </android.support.constraint.ConstraintLayout>
-
-
 </android.support.constraint.ConstraintLayout>

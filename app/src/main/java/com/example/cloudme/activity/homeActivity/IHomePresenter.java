@@ -5,7 +5,6 @@ package com.example.cloudme.activity.homeActivity;
  */
 
 public interface IHomePresenter {
-     boolean isFieldEmpty(String cityName);
      void fetchCoordinatesFromGoogle (String cityName);
-     void fetchWeatherFromOpenWeather (long lat, long lon);
+     void fetchWeatherFromOpenWeather (long latitude, long longitude);
 }

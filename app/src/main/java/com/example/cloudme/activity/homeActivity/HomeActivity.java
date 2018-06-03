@@ -17,12 +17,14 @@ import com.example.cloudme.cloudme.R;
  */
 
 public class HomeActivity extends AppCompatActivity implements IHomeView {
-    private EditText inputSearchEditText;
-    private ProgressBar progressBar;
+    private EditText searchCityEditText;
+    private ProgressBar homeActivityProgressBar;
     private ImageView checkImageView;
     private ImageView errorImageView;
+    private TextView resultMessageTextView;
     private TextView errorHomeTextView;
     private Button searchCityButton;
+    private Button searchWeatherButton;
 
     private IHomePresenter presenter;
 
@@ -34,85 +36,121 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         setContentView(R.layout.home_activity);
         presenter = new HomeActivityPresenter(this);
 
-        inputSearchEditText = findViewById(R.id.inputSearchEditText);
-        progressBar = findViewById(R.id.progressBar);
+        searchCityEditText = findViewById(R.id.searchCityEditText);
+        homeActivityProgressBar = findViewById(R.id.homeActivityProgressBar);
         checkImageView = findViewById(R.id.checkImageView);
         errorImageView = findViewById(R.id.errorImageView);
+        resultMessageTextView = findViewById(R.id.resultMessageTextView);
         errorHomeTextView = findViewById(R.id.errorHomeTextView);
         searchCityButton = findViewById(R.id.searchCityButton);
-
+        searchWeatherButton = findViewById(R.id.searchWeatherButton);
 
         searchCityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cityName = inputSearchEditText.getText().toString();
+                cityName = searchCityEditText.getText().toString();
             }
         });
-    }
-/*
- пустий рядок
- не знайдено погоду
- не знайдено місто
-  */
-
-
-
-    @Override
-    public void showErrorMessage() {
-        Toast.makeText(HomeActivity.this, "We can't find this city\n", Toast.LENGTH_LONG).show();
-        errorImageView.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void hideErrorMessage() {
-        errorImageView.setVisibility(View.INVISIBLE);
     }
 
     @Override
     public void showSuccessMessage() {
         checkImageView.setVisibility(View.VISIBLE);
+        resultMessageTextView.setVisibility(View.VISIBLE);
+        resultMessageTextView.setText(getResources().getText(R.string.success));
+        Toast.makeText(this, getResources().getText(R.string.success), Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void hideSuccessMessage() {
         checkImageView.setVisibility(View.INVISIBLE);
+        resultMessageTextView.setVisibility(View.INVISIBLE);
+        resultMessageTextView.setText("");
     }
 
     @Override
-    public void showUserLoadingProgressBar() {
-        progressBar.setVisibility(View.VISIBLE);
+    public void showCityNotFoundErrorMessage() {
+        resultMessageTextView.setVisibility(View.INVISIBLE);
+        errorHomeTextView.setVisibility(View.VISIBLE);
+        errorHomeTextView.setText(getResources().getText(R.string.city_is_not_found));
+        Toast.makeText(this, getResources().getText(R.string.city_is_not_found), Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void hideUserLoadingProgressBar() {
-        progressBar.setVisibility(View.INVISIBLE);
+    public void hideCityNotFoundErrorMessage() {
+        errorHomeTextView.setVisibility(View.INVISIBLE);
+        errorHomeTextView.setText("");
+    }
+
+    @Override
+    public void showWeatherNotFoundErrorMessage() {
+        resultMessageTextView.setVisibility(View.INVISIBLE);
+        errorHomeTextView.setVisibility(View.VISIBLE);
+        errorHomeTextView.setText(getResources().getText(R.string.weather_is_not_found));
+        Toast.makeText(this, getResources().getText(R.string.weather_is_not_found), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void hideWeatherNotFoundErrorMessage() {
+        errorHomeTextView.setVisibility(View.INVISIBLE);
+        errorHomeTextView.setText("");
+    }
+
+    @Override
+    public void showFieldIsEmptyErrorMessage() {
+        resultMessageTextView.setVisibility(View.INVISIBLE);
+        errorHomeTextView.setVisibility(View.VISIBLE);
+        errorHomeTextView.setText(getResources().getText(R.string.field_is_empty));
+        Toast.makeText(this, getResources().getText(R.string.field_is_empty), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void hideFieldIsEmptyErrorMessage() {
+        errorHomeTextView.setVisibility(View.INVISIBLE);
+        errorHomeTextView.setText("");
+    }
+
+    @Override
+    public void showHomeActivityProgressBar() {
+        homeActivityProgressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideHomeActivityProgressBar() {
+        homeActivityProgressBar.setVisibility(View.INVISIBLE);
     }
 
     @Override
     public void enableSearchCityButton() {
-        searchCityButton.setEnabled(true);
-    }
-
-    @Override
-    public void disableSearchCityButton() {
-        searchCityButton.isEnabled();
-        searchCityButton.setEnabled(false);
-    }
-
-    @Override
-    public void isFieldsEmpty() {
-        if(inputSearchEditText.getText().toString().equals("")){
-            return;
+        if (!searchCityButton.isEnabled()) {
+            searchCityButton.setEnabled(true);
         }
     }
 
     @Override
-    public void isCityFound() {
-
+    public void disableSearchCityButton() {
+        if (searchCityButton.isEnabled()) {
+            searchCityButton.setEnabled(false);
+        }
     }
 
     @Override
-    public void isWeatherFound() {
+    public void enableSearchWeatherButton() {
+        if (!searchWeatherButton.isEnabled()) {
+            searchWeatherButton.setEnabled(true);
+        }
+    }
 
+    @Override
+    public void disableSearchWeatherButton() {
+        if (searchWeatherButton.isEnabled()) {
+            searchWeatherButton.setEnabled(false);
+        }
+    }
+
+    @Override
+    public boolean isFieldEmpty() {
+        return searchCityEditText.getText().toString() != null &&
+                !searchCityEditText.getText().toString().equals("");
     }
 }
