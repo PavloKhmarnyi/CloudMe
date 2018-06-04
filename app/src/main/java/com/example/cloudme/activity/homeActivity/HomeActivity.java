@@ -28,7 +28,7 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
 
     private IHomePresenter presenter;
 
-    private String cityName;
+    private String cityName = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -169,7 +169,6 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
 
     @Override
     public boolean isFieldEmpty() {
-        return searchCityEditText.getText().toString() == null &&
-                searchCityEditText.getText().toString().equals("");
+        return searchCityEditText.getText().toString().equals("");
     }
 }
