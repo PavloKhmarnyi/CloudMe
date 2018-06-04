@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="11dp"
             android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/colorTextPrimary"
             android:hint="@string/enter"
             android:textColorHint="@color/colorAccent"
             android:inputType="phone"

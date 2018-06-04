@@ -19,4 +19,10 @@
     <string name="city_is_found">City is found</string>
     <string name="weather_is_not_found">Weather is not found</string>
     <string name="weather_is_found">Weather is found</string>
+    <string name="date">Date:</string>
+    <string name="time">Time:</string>
+    <string name="temperature">Temperature:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="pressure">Pressure:</string>
+    <string name="wind_speed">Wind speed:</string>
 </resources>
