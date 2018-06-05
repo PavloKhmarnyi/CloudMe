@@ -50,7 +50,7 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
             public void onClick(View view) {
                 cityName = searchCityEditText.getText().toString();
                 if (!isFieldEmpty()) {
-                    presenter.fetchCoordinatesFromGoogle("Ternopil");
+                    presenter.fetchCoordinatesFromGoogle(cityName);
                 } else {
                     showCityNotFoundErrorMessage();
                 }
