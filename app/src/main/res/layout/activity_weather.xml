@@ -1,72 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="@drawable/background">
-
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@drawable/background">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/gradesContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/weatherRecyclerView"
+        app:layout_constraintEnd_toStartOf="@id/humidityContainer">
 
         <TextView
             android:id="@+id/gradesTextView"
-            android:layout_width="81dp"
-            android:layout_height="44dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="66dp"
-            android:text="25°C"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:textColor="@color/textColor1"
-            android:textSize="32dp"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="@dimen/text_size_for_data"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/weatherSignTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="25C"
             />
 
         <ImageView
             android:id="@+id/weatherSignTextView"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="95dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
             android:background="@drawable/sun"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gradesTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/humidityContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/gradesContainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/weatherRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:id="@+id/humidityTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="66dp"
-            android:text="34%"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:textColor="@color/textColor1"
-            android:textSize="32dp"
-            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="@dimen/text_size_for_data"
+            android:gravity="center"
+            android:textAlignment="center"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/humiditySignTextView"
+            tools:text="34%"
+            />
 
         <ImageView
             android:id="@+id/humiditySignTextView"
-            android:layout_width="112dp"
-            android:layout_height="108dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="124dp"
-            android:background="@drawable/drop"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/weatherRecyclerView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_drops"
+            app:layout_constraintTop_toBottomOf="@id/humidityTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints" />
     </android.support.constraint.ConstraintLayout>
-</ScrollView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/weatherRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gradesContainer"/>
+
+</android.support.constraint.ConstraintLayout>
