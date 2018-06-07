@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         checkImageView.setVisibility(View.VISIBLE);
         resultMessageTextView.setVisibility(View.VISIBLE);
         resultMessageTextView.setText(message);
-        Toast.makeText(this, getResources().getText(R.string.success), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getText(R.string.success), Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -78,7 +78,7 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         resultMessageTextView.setVisibility(View.INVISIBLE);
         errorHomeTextView.setVisibility(View.VISIBLE);
         errorHomeTextView.setText(errorMessage);
-        Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -92,7 +92,7 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         resultMessageTextView.setVisibility(View.INVISIBLE);
         errorHomeTextView.setVisibility(View.VISIBLE);
         errorHomeTextView.setText(getResources().getText(R.string.city_is_not_found));
-        Toast.makeText(this, getResources().getText(R.string.city_is_not_found), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getText(R.string.city_is_not_found), Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -106,7 +106,7 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         resultMessageTextView.setVisibility(View.INVISIBLE);
         errorHomeTextView.setVisibility(View.VISIBLE);
         errorHomeTextView.setText(getResources().getText(R.string.weather_is_not_found));
-        Toast.makeText(this, getResources().getText(R.string.weather_is_not_found), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getText(R.string.weather_is_not_found), Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -120,7 +120,7 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         resultMessageTextView.setVisibility(View.INVISIBLE);
         errorHomeTextView.setVisibility(View.VISIBLE);
         errorHomeTextView.setText(getResources().getText(R.string.field_is_empty));
-        Toast.makeText(this, getResources().getText(R.string.field_is_empty), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getText(R.string.field_is_empty), Toast.LENGTH_LONG).show();
     }
 
     @Override
