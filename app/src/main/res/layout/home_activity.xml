@@ -20,9 +20,8 @@
 
         <EditText
             android:id="@+id/searchCityEditText"
-            android:layout_width="524dp"
+            android:layout_width="1000dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="11dp"
             android:backgroundTint="@color/colorAccent"
             android:textColor="@color/colorTextPrimary"
             android:hint="@string/enter"
@@ -33,47 +32,44 @@
         <ProgressBar
             android:id="@+id/homeActivityProgressBar"
             style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="12dp"
             android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/searchCityEditText" />
 
         <ImageView
             android:id="@+id/checkImageView"
-            android:layout_width="44dp"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="12dp"
             android:src="@drawable/check"
             android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/searchCityEditText" />
 
         <ImageView
             android:id="@+id/errorImageView"
-            android:layout_width="44dp"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginRight="12dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/error"
             android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/searchCityEditText" />
     </android.support.constraint.ConstraintLayout>
 
-    <View
-        android:id="@+id/homeActivityHeadSeparator"
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:background="@color/colorAccent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="50dp" />
-
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeActivityHeadSeparator">
+        app:layout_constraintTop_toBottomOf="@+id/homeActivityHeadConstraintLayout">
 
         <TextView
             android:id="@+id/resultMessageTextView"
@@ -81,13 +77,14 @@
             android:layout_height="wrap_content"
             android:text="@string/result"
             android:textColor="@color/buttonColor"
-            android:textSize="45sp"
+            android:textSize="22sp"
+            android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/searchCityButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:maxLines="2"
+            android:maxLines="4"
             android:visibility="invisible"/>
 
         <TextView
@@ -96,13 +93,14 @@
             android:layout_height="wrap_content"
             android:text="@string/city_is_not_found"
             android:textColor="@color/primaryErrorColor"
-            android:textSize="45sp"
+            android:textSize="22sp"
+            android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/searchCityButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:maxLines="2"
+            android:maxLines="4"
             android:visibility="invisible"/>
 
         <Button

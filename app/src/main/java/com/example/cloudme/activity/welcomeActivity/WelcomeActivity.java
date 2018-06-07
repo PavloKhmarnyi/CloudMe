@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cloudme.activity.homeActivity.HomeActivity;
@@ -19,9 +21,9 @@ import com.example.cloudme.util.PermissionManager;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    private LinearLayout textLinearLayout;
-    private LinearLayout buttonLinearLayout;
+    private TextView welcome_message;
     private Button nextActivityButton;
+    private ImageView imageView;
 
     private Animation upToDown;
     private Animation downToUp;
@@ -32,13 +34,14 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
 
         nextActivityButton = (Button) findViewById(R.id.nextActivityButton);
-        buttonLinearLayout = (LinearLayout) findViewById(R.id.buttonLinearLayout);
-        textLinearLayout = (LinearLayout) findViewById(R.id.textLinearLayout);
+        welcome_message = (TextView) findViewById(R.id.welcome_message);
+        imageView = (ImageView) findViewById(R.id.imageView);
 
         upToDown = AnimationUtils.loadAnimation(this, R.anim.up_to_down);
         downToUp = AnimationUtils.loadAnimation(this, R.anim.down_to_up);
 
-        textLinearLayout.setAnimation(upToDown);
+        imageView.setAnimation(upToDown);
+        welcome_message.setAnimation(upToDown);
         nextActivityButton.setAnimation(downToUp);
 
         nextActivityButton.setOnClickListener(new View.OnClickListener() {
