@@ -6,5 +6,5 @@ package com.example.cloudme.activity.homeActivity;
 
 public interface IHomePresenter {
      void fetchCoordinatesFromGoogle (String cityName);
-     void fetchWeatherFromOpenWeather (long latitude, long longitude);
+     void fetchWeatherFromOpenWeather (double lat, double lon, String appid);
 }

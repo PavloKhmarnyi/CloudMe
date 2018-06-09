@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cloudme.cloudme.R;
+import com.example.cloudme.service.Config;
+import com.example.cloudme.service.google.model.Location;
 
 /**
  * Created by Slavik on 21.04.2018.
@@ -25,6 +27,8 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
     private TextView errorHomeTextView;
     private Button searchCityButton;
     private Button searchWeatherButton;
+
+    private Location location;
 
     private IHomePresenter presenter;
 
@@ -54,6 +58,18 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
                 } else {
                     showCityNotFoundErrorMessage();
                 }
+            }
+        });
+
+        searchWeatherButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (location != null){
+                   presenter.fetchWeatherFromOpenWeather(location.getLatitude(), location.getLongitude() , Config.OPENWEATHER_API_KEY);
+                }else{
+                    //here must be error message
+                }
+
             }
         });
     }
@@ -170,5 +186,15 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
     @Override
     public boolean isFieldEmpty() {
         return searchCityEditText.getText().toString().equals("");
+    }
+
+    @Override
+    public Location getLocation() {
+        return location;
+    }
+
+    @Override
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }

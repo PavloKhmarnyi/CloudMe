@@ -1,5 +1,7 @@
 package com.example.cloudme.activity.homeActivity;
 
+import com.example.cloudme.service.google.model.Location;
+
 /**
  * Created by Illya Havrulyk on 5/5/2018.
  */
@@ -22,4 +24,6 @@ public interface IHomeView {
     void enableSearchWeatherButton();
     void disableSearchWeatherButton();
     boolean isFieldEmpty();
+    Location getLocation();
+    void setLocation(Location location);
 }
