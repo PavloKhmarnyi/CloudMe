@@ -3,95 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="64dp">
+    android:layout_height="70dp"
+    android:background="#0D0C1C">
 
     <TextView
-        android:id="@+id/dayTextView1"
-        android:layout_width="100dp"
-        android:layout_height="41dp"
-
-        android:layout_marginBottom="12dp"
-        android:layout_marginLeft="4dp"
-
+        android:id="@+id/dayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Sunday"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-
+        android:textColor="@color/buttonColor"
+        android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/cloudinaryWeatherItemImageView1"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginLeft="5dp"
-        android:background="@drawable/sun"
-        app:layout_constraintLeft_toRightOf="@id/dayTextView1"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="12dp" />
+        app:layout_constraintEnd_toStartOf="@+id/temperatureTextView1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/temperatureTextView1"
-        android:layout_width="50dp"
-        android:layout_height="29dp"
-
-        android:layout_marginLeft="5dp"
-
-        android:text="25°C"
-        android:textColor="@color/black"
-        android:textSize="22dp"
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24°C"
+        android:textColor="@color/buttonColor"
+        android:textSize="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintLeft_toRightOf="@id/cloudinaryWeatherItemImageView1"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/humidityWeatherItemImageView1"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="7dp"
-        android:background="@drawable/drop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/temperatureTextView1"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toStartOf="@+id/humidityTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dayTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/warmTextView1"
-        android:layout_width="45dp"
-        android:layout_height="29dp"
-
-        android:layout_marginLeft="2dp"
-
+        android:id="@+id/humidityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="34%"
-        android:textColor="@color/black"
-        android:textSize="22dp"
-
+        android:textColor="@color/buttonColor"
+        android:textSize="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintLeft_toRightOf="@id/humidityWeatherItemImageView1"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toStartOf="@+id/dateTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/temperatureTextView1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/dateTextView1"
-        android:layout_width="100dp"
-        android:layout_height="26dp"
-
-        android:layout_marginLeft="1dp"
-
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="28/4/2018"
-        android:textColor="@color/black"
-        android:textSize="18dp"
-
+        android:textColor="@color/buttonColor"
+        android:textSize="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintLeft_toRightOf="@id/warmTextView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/humidityTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.5" />
 </android.support.constraint.ConstraintLayout>
