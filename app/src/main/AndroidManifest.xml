@@ -26,6 +26,8 @@
         </activity>
         <activity android:name="com.example.cloudme.activity.dailyInfoActivity.DailyInfoActivity"/>
         <activity android:name="com.example.cloudme.activity.homeActivity.HomeActivity"/>
+        <activity android:name="com.example.cloudme.activity.weatherActivity.WeatherActivity"/>
+        <activity android:name="com.example.cloudme.activity.weatherListActivity.WeatherListActivity"/>
     </application>
 
 </manifest>
