@@ -11,10 +11,10 @@ import java.util.List;
 public class WeatherItem {
 
     @SerializedName("dt")
-    private long dateTime;
+    private String dateTime;
 
     @SerializedName("dt_txt")
-    private long DateTimeTxt;
+    private String DateTimeTxt;
 
     private Main main;
 
@@ -28,19 +28,19 @@ public class WeatherItem {
 
     private Sys sys;
 
-    public long getDateTime() {
+    public String getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(long dateTime) {
+    public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
     }
 
-    public long getDateTimeTxt() {
+    public String getDateTimeTxt() {
         return DateTimeTxt;
     }
 
-    public void setDateTimeTxt(long dateTimeTxt) {
+    public void setDateTimeTxt(String dateTimeTxt) {
         DateTimeTxt = dateTimeTxt;
     }
 

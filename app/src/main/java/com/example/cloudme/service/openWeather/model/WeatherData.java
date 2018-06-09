@@ -1,5 +1,7 @@
 package com.example.cloudme.service.openWeather.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -12,6 +14,7 @@ public class WeatherData {
 
     private String message;
 
+    @SerializedName("list")
     private List<WeatherItem> weatherItems;
 
     private  City city;

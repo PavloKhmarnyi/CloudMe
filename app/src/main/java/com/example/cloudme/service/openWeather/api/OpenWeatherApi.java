@@ -11,6 +11,6 @@ import retrofit2.http.Query;
  */
 
 public interface OpenWeatherApi {
-    @GET("/json")
+    @GET("data/2.5/forecast")
     Call<WeatherData> fetchWeatherData(@Query("lat") double lat, @Query("lon") double lon, @Query("appid") String appid);
 }
