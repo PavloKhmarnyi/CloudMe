@@ -8,94 +8,94 @@ import com.google.gson.annotations.SerializedName;
 
 public class Main {
 
-    private int temp;
+    private double temp;
 
     @SerializedName("temp_min")
-    private int tempMin;
+    private double tempMin;
 
     @SerializedName("temp_max")
-    private int tempMax;
+    private double tempMax;
 
-    private int pressure;
+    private double pressure;
 
     @SerializedName("sea_level")
-    private int seaLevel;
+    private double seaLevel;
 
     /**
      * Atmospheric pressure on the ground level, hPa
      */
     @SerializedName("grnd_level")
-    private int grndLevel;
+    private double grndLevel;
 
-    private int humidity;
+    private double humidity;
 
     /**
-     * Internal parameter
+     * doubleernal parameter
      */
     @SerializedName("temp_kf")
-    private int tempKf;
+    private double tempKf;
 
-    public int getTemp() {
+    public double getTemp() {
         return temp;
     }
 
-    public void setTemp(int temp) {
+    public void setTemp(double temp) {
         this.temp = temp;
     }
 
-    public int getTempMin() {
+    public double getTempMin() {
         return tempMin;
     }
 
-    public void setTempMin(int tempMin) {
+    public void setTempMin(double tempMin) {
         this.tempMin = tempMin;
     }
 
-    public int getTempMax() {
+    public double getTempMax() {
         return tempMax;
     }
 
-    public void setTempMax(int tempMax) {
+    public void setTempMax(double tempMax) {
         this.tempMax = tempMax;
     }
 
-    public int getPressure() {
+    public double getPressure() {
         return pressure;
     }
 
-    public void setPressure(int pressure) {
+    public void setPressure(double pressure) {
         this.pressure = pressure;
     }
 
-    public int getSeaLevel() {
+    public double getSeaLevel() {
         return seaLevel;
     }
 
-    public void setSeaLevel(int seaLevel) {
+    public void setSeaLevel(double seaLevel) {
         this.seaLevel = seaLevel;
     }
 
-    public int getGrndLevel() {
+    public double getGrndLevel() {
         return grndLevel;
     }
 
-    public void setGrndLevel(int grndLevel) {
+    public void setGrndLevel(double grndLevel) {
         this.grndLevel = grndLevel;
     }
 
-    public int getHumidity() {
+    public double getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(int humidity) {
+    public void setHumidity(double humidity) {
         this.humidity = humidity;
     }
 
-    public int getTempKf() {
+    public double getTempKf() {
         return tempKf;
     }
 
-    public void setTempKf(int tempKf) {
+    public void setTempKf(double tempKf) {
         this.tempKf = tempKf;
     }
 }
