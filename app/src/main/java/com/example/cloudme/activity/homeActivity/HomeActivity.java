@@ -205,4 +205,14 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         Intent intent = new Intent(HomeActivity.this, WeatherListActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void showCheckImageView() {
+        checkImageView.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideCheckImageView() {
+        checkImageView.setVisibility(View.INVISIBLE);
+    }
 }

@@ -36,8 +36,6 @@ public class HomeActivityPresenter implements IHomePresenter {
 
         openWeatherService = OpenWeatherService.getInstance();
         openWeatherApi = openWeatherService.getOpenWeatherApi();
-
-
     }
 
     @Override

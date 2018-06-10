@@ -27,4 +27,6 @@ public interface IHomeView {
     Location getLocation();
     void setLocation(Location location);
     void startNewActivity();
+    void showCheckImageView();
+    void hideCheckImageView();
 }
