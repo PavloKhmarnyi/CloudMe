@@ -71,7 +71,6 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
                 }else{
                     //here must be error message
                 }
-
             }
         });
     }
