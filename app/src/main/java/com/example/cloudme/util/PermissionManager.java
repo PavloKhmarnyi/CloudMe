@@ -16,7 +16,7 @@ public class PermissionManager {
         if (!isPermissions(activity)) {
             ActivityCompat.requestPermissions(activity, new String[]{ Manifest.permission.ACCESS_COARSE_LOCATION,
                             Manifest.permission.ACCESS_FINE_LOCATION },
-                    Config.PERMISSION_REQUEST_CODE);
+                    Utils.PERMISSION_REQUEST_CODE);
         }
     }
 

@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.example.cloudme.cloudme.R;
 import com.example.cloudme.service.openWeather.model.WeatherItem;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,27 +20,32 @@ import java.util.List;
  */
 
 public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHolder> {
-    private final OnWeatherItemClickListener listener;
-    private LayoutInflater inflater;
     private Context context;
+    private WeatherItemClickListener listener;
+    private LayoutInflater inflater;
     private List<WeatherItem> weatherItems;
 
-    public WeatherAdapter(Context context, ArrayList<WeatherItem> weatherItems, OnWeatherItemClickListener listener) {
-        this.listener = listener;
+    public WeatherAdapter(Context context, List<WeatherItem> weatherItems) {
         this.context = context;
+        this.weatherItems = weatherItems;
         this.inflater = LayoutInflater.from(context);
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.weather_item, parent, false);
+        View view = inflater.inflate(R.layout.weather_item, parent, false);
 
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
+        holder.dayWeatherItemTextView.setText(position + ".");
+        holder.temperatureWeatherItemTextView.setText(weatherItems.get(position).getMain().getTemp() + " \u2109");
+        holder.humidityWeatherItemTextView.setText(weatherItems.get(position).getMain().getHumidity() + " %");
+        holder.dateWeatherItemTextView.setText(weatherItems.get(position).getDateTimeTxt());
+        listener = new WeatherItemClickListener(context, weatherItems, position);
+        holder.view.setOnClickListener(listener);
     }
 
     @Override
@@ -48,10 +55,19 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final View view;
+        private final TextView dayWeatherItemTextView;
+        private final TextView temperatureWeatherItemTextView;
+        private final TextView humidityWeatherItemTextView;
+        private final TextView dateWeatherItemTextView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             this.view = itemView;
+
+            dayWeatherItemTextView = itemView.findViewById(R.id.dayWeatherItemTextView);
+            temperatureWeatherItemTextView = itemView.findViewById(R.id.temperatureWeatherItemTextView);
+            humidityWeatherItemTextView = itemView.findViewById(R.id.humidityWeatherItemTextView);
+            dateWeatherItemTextView = itemView.findViewById(R.id.dateWeatherItemTextView);
         }
     }
 }

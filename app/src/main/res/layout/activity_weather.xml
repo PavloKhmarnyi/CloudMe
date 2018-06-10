@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-            android:id="@+id/humidityTextView"
+            android:id="@+id/humidityWeatherItemTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:textColor="@color/textColor1"
@@ -75,7 +75,7 @@
             android:layout_height="0dp"
             android:padding="15dp"
             android:src="@drawable/ic_drops"
-            app:layout_constraintTop_toBottomOf="@id/humidityTextView"
+            app:layout_constraintTop_toBottomOf="@id/humidityWeatherItemTextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -36,10 +36,10 @@
             android:textSize="24sp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintTop_toBottomOf="@+id/cityTextView"
-            app:layout_constraintRight_toLeftOf="@id/dateTextView"/>
+            app:layout_constraintRight_toLeftOf="@id/dateWeatherItemTextView"/>
 
         <TextView
-            android:id="@+id/dateTextView"
+            android:id="@+id/dateWeatherItemTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -62,7 +62,7 @@
             android:textColor="@color/buttonColor"
             android:textSize="24sp"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintTop_toBottomOf="@+id/dateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/dateWeatherItemTextView"
             app:layout_constraintRight_toLeftOf="@id/timeTextView"/>
 
         <TextView
@@ -75,7 +75,7 @@
             android:layout_marginLeft="90dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/dateWeatherItemTextView" />
 
         <TextView
             android:id="@+id/temperatureLabelTextView"
@@ -114,10 +114,10 @@
             android:layout_marginRight="8dp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintTop_toBottomOf="@+id/temperatureTextView"
-            app:layout_constraintRight_toLeftOf="@id/humidityTextView" />
+            app:layout_constraintRight_toLeftOf="@id/humidityWeatherItemTextView" />
 
         <TextView
-            android:id="@+id/humidityTextView"
+            android:id="@+id/humidityWeatherItemTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_75"
@@ -138,7 +138,7 @@
             android:textSize="24sp"
             android:layout_marginRight="8dp"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintTop_toBottomOf="@+id/humidityTextView"
+            app:layout_constraintTop_toBottomOf="@+id/humidityWeatherItemTextView"
             app:layout_constraintRight_toLeftOf="@id/pressureTextView" />
 
         <TextView
@@ -152,7 +152,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/humidityTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/humidityWeatherItemTextView" />
 
         <TextView
             android:id="@+id/windSpeedLabelTextView"

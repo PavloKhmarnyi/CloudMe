@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.cloudme.adapter.OnWeatherItemClickListener;
 import com.example.cloudme.adapter.WeatherAdapter;
 import com.example.cloudme.cloudme.R;
 
@@ -26,13 +25,5 @@ public class WeatherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_weather);
 
        // weatherRecyclerView = findViewById(R.id.weatherRecyclerView);
-        weatherRecyclerView.setLayoutManager(new LinearLayoutManager(WeatherActivity.this));
-
-        weatherAdapter = new WeatherAdapter(WeatherActivity.this, weathersList, new OnWeatherItemClickListener() {
-            @Override
-            public void onWeatherItemClick(String weatherItem) {
-
-            }
-        });
     }
 }

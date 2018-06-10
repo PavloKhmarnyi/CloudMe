@@ -7,46 +7,46 @@
     android:background="#0D0C1C">
 
     <TextView
-        android:id="@+id/dayTextView"
+        android:id="@+id/dayWeatherItemTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sunday"
         android:textColor="@color/buttonColor"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/temperatureTextView1"
+        app:layout_constraintEnd_toStartOf="@+id/temperatureWeatherItemTextView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/temperatureTextView1"
+        android:id="@+id/temperatureWeatherItemTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="24°C"
         android:textColor="@color/buttonColor"
         android:textSize="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/humidityTextView"
+        app:layout_constraintEnd_toStartOf="@+id/humidityWeatherItemTextView"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/dayTextView"
+        app:layout_constraintStart_toEndOf="@+id/dayWeatherItemTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/humidityTextView"
+        android:id="@+id/humidityWeatherItemTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="34%"
         android:textColor="@color/buttonColor"
         android:textSize="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/dateTextView"
+        app:layout_constraintEnd_toStartOf="@+id/dateWeatherItemTextView"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/temperatureTextView1"
+        app:layout_constraintStart_toEndOf="@+id/temperatureWeatherItemTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/dateTextView"
+        android:id="@+id/dateWeatherItemTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="28/4/2018"
@@ -55,7 +55,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/humidityTextView"
+        app:layout_constraintStart_toEndOf="@+id/humidityWeatherItemTextView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
 </android.support.constraint.ConstraintLayout>

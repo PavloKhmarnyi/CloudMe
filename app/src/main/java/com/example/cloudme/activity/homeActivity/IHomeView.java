@@ -26,4 +26,5 @@ public interface IHomeView {
     boolean isFieldEmpty();
     Location getLocation();
     void setLocation(Location location);
+    void startNewActivity();
 }

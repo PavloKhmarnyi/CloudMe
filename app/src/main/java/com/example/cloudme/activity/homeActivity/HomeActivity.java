@@ -1,5 +1,6 @@
 package com.example.cloudme.activity.homeActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cloudme.activity.weatherListActivity.WeatherListActivity;
 import com.example.cloudme.cloudme.R;
 import com.example.cloudme.service.Config;
 import com.example.cloudme.service.google.model.Location;
@@ -196,5 +198,11 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
     @Override
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    @Override
+    public void startNewActivity() {
+        Intent intent = new Intent(HomeActivity.this, WeatherListActivity.class);
+        startActivity(intent);
     }
 }

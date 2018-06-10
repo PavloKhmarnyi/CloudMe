@@ -89,10 +89,9 @@ public class HomeActivityPresenter implements IHomePresenter {
                     weatherData.getWeatherItems();
                     view.enableSearchCityButton();
                     view.enableSearchWeatherButton();
-                    //TODO: create instance and set weather data
                     weatherDataTransfer = WeatherDataTransfer.getInstance();
                     weatherDataTransfer.setWeatherData(weatherData);
-
+                    view.startNewActivity();
                 } else {
                     view.disableSearchCityButton();
                     view.showErrorMessage(response.body().getMessage());

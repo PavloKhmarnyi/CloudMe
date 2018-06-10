@@ -10,13 +10,12 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cloudme.activity.homeActivity.HomeActivity;
 import com.example.cloudme.cloudme.R;
-import com.example.cloudme.util.Config;
+import com.example.cloudme.util.Utils;
 import com.example.cloudme.util.PermissionManager;
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -66,7 +65,7 @@ public class WelcomeActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if (requestCode == Config.PERMISSION_REQUEST_CODE && grantResults.length == 2 && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED ){
+        if (requestCode == Utils.PERMISSION_REQUEST_CODE && grantResults.length == 2 && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED ){
             //
         } else {
             Toast.makeText(this, "Permission not allowed",Toast.LENGTH_SHORT).show();
