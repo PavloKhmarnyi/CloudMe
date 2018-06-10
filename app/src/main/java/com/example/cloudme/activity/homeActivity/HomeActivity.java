@@ -28,7 +28,6 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
     private Button searchCityButton;
     private Button searchWeatherButton;
 
-
     private Location location;
 
     private IHomePresenter presenter;
@@ -49,7 +48,6 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         errorHomeTextView = findViewById(R.id.errorHomeTextView);
         searchCityButton = findViewById(R.id.searchCityButton);
         searchWeatherButton = findViewById(R.id.searchWeatherButton);
-
 
         searchCityButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,8 +182,6 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
             searchWeatherButton.setEnabled(false);
         }
     }
-
-
 
     @Override
     public boolean isFieldEmpty() {

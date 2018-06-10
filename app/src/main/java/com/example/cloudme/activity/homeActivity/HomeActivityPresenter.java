@@ -29,8 +29,6 @@ public class HomeActivityPresenter implements IHomePresenter {
 
     private WeatherDataTransfer weatherDataTransfer;
 
-
-
     public HomeActivityPresenter(IHomeView view) {
         this.view = view;
         googleDataService =  GoogleDataService.getInstance();
@@ -38,8 +36,6 @@ public class HomeActivityPresenter implements IHomePresenter {
 
         openWeatherService = OpenWeatherService.getInstance();
         openWeatherApi = openWeatherService.getOpenWeatherApi();
-
-
     }
 
     @Override
@@ -61,8 +57,6 @@ public class HomeActivityPresenter implements IHomePresenter {
                     view.enableSearchWeatherButton();
                     view.showSuccessMessage(address);
                     view.setLocation(location);
-
-
                 } else {
                     view.disableSearchCityButton();
                     view.showErrorMessage(response.body().getErrorMessage());
