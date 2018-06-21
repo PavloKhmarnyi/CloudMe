@@ -66,7 +66,7 @@ public class HomeActivityPresenter implements IHomePresenter {
             @Override
             public void onFailure(Call<GoogleData> call, Throwable t) {
                 view.hideHomeActivityProgressBar();
-                view.showCityNotFoundErrorMessage();
+                view.showErrorMessage(t.getMessage());
                 view.disableSearchCityButton();
             }
         });
