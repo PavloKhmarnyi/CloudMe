@@ -33,7 +33,6 @@ public class DailyInfoActivity extends AppCompatActivity {
         humidityTextView = findViewById(R.id.humidityWeatherItemTextView);
         preassureTextView = findViewById(R.id.pressureTextView);
         windSpeedTextView = findViewById(R.id.windSpeedTextView);
-        cloudinaryImageView = findViewById(R.id.cloudinaryImageView);
 
         Intent intent = getIntent();
         String cityName = intent.getStringExtra(CITY_NAME);

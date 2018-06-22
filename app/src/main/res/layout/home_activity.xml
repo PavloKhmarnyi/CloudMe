@@ -20,12 +20,9 @@
 
         <EditText
             android:id="@+id/searchCityEditText"
-            android:layout_width="1000dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
-            android:textColor="@color/colorTextPrimary"
-            android:hint="@string/enter"
-            android:textColorHint="@color/colorAccent"
+            android:textColor="@color/buttonColor"
             app:layout_constraintRight_toLeftOf="@+id/homeActivityProgressBar"
             app:layout_constraintStart_toStartOf="parent" />
 
