@@ -49,8 +49,6 @@ public class DailyInfoActivity extends AppCompatActivity {
         double cloudinary = intent.getDoubleExtra(CLOUDINARY, 0);
         String[] dateTime = weatherDate.split(" ");
 
-
-
         cityTextView.setText(cityName);
         dateTextView.setText(dateTime[0]);
         timeTextView.setText(dateTime[1]);
@@ -58,7 +56,5 @@ public class DailyInfoActivity extends AppCompatActivity {
         humidityTextView.setText(humidity + " %");
         preassureTextView.setText(pressure + " hPa");
         windSpeedTextView.setText(windSpeed + " m/sec");
-
-
     }
 }
