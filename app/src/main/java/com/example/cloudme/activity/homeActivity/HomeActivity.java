@@ -3,6 +3,8 @@ package com.example.cloudme.activity.homeActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -51,6 +53,17 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         searchCityButton = findViewById(R.id.searchCityButton);
         searchWeatherButton = findViewById(R.id.searchWeatherButton);
 
+        searchCityEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enableSearchCityButton();
+                disableSearchWeatherButton();
+                hideCheckImageView();
+                hideErrorImageView();
+                hideErrorMessage();
+            }
+        });
+
         searchCityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +71,8 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
                 if (!isFieldEmpty()) {
                     presenter.fetchCoordinatesFromGoogle(cityName);
                 } else {
-                    showCityNotFoundErrorMessage();
+                    showFieldIsEmptyErrorMessage();
+                    disableSearchWeatherButton();
                 }
             }
         });
@@ -66,10 +80,12 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
         searchWeatherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (location != null){
-                   presenter.fetchWeatherFromOpenWeather(location.getLatitude(), location.getLongitude() , Config.OPENWEATHER_API_KEY);
-                }else{
-                    //here must be error message
+                if (location != null) {
+                    presenter.fetchWeatherFromOpenWeather(location.getLatitude(), location.getLongitude() , Config.OPENWEATHER_API_KEY);
+                } else {
+                    showCityNotFoundErrorMessage();
+                    disableSearchCityButton();
+                    disableSearchWeatherButton();
                 }
             }
         });
@@ -113,12 +129,6 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
     }
 
     @Override
-    public void hideCityNotFoundErrorMessage() {
-        errorHomeTextView.setVisibility(View.INVISIBLE);
-        errorHomeTextView.setText("");
-    }
-
-    @Override
     public void showWeatherNotFoundErrorMessage() {
         resultMessageTextView.setVisibility(View.INVISIBLE);
         errorHomeTextView.setVisibility(View.VISIBLE);
@@ -127,23 +137,11 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
     }
 
     @Override
-    public void hideWeatherNotFoundErrorMessage() {
-        errorHomeTextView.setVisibility(View.INVISIBLE);
-        errorHomeTextView.setText("");
-    }
-
-    @Override
     public void showFieldIsEmptyErrorMessage() {
         resultMessageTextView.setVisibility(View.INVISIBLE);
         errorHomeTextView.setVisibility(View.VISIBLE);
         errorHomeTextView.setText(getResources().getText(R.string.field_is_empty));
         Toast.makeText(this, getResources().getText(R.string.field_is_empty), Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void hideFieldIsEmptyErrorMessage() {
-        errorHomeTextView.setVisibility(View.INVISIBLE);
-        errorHomeTextView.setText("");
     }
 
     @Override
@@ -213,5 +211,15 @@ public class HomeActivity extends AppCompatActivity implements IHomeView {
     @Override
     public void hideCheckImageView() {
         checkImageView.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void showErrorImageView() {
+        errorImageView.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideErrorImageView() {
+        errorImageView.setVisibility(View.INVISIBLE);
     }
 }

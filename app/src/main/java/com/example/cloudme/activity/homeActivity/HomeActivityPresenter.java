@@ -1,5 +1,7 @@
 package com.example.cloudme.activity.homeActivity;
 
+import android.widget.Toast;
+
 import com.example.cloudme.service.google.api.GoogleDataApi;
 import com.example.cloudme.service.google.api.GoogleDataService;
 import com.example.cloudme.service.google.model.GoogleData;
@@ -39,26 +41,35 @@ public class HomeActivityPresenter implements IHomePresenter {
     }
 
     @Override
-    public void fetchCoordinatesFromGoogle(String cityName) {
+    public void fetchCoordinatesFromGoogle(final String cityName) {
         view.showHomeActivityProgressBar();
         googleDataApi.fetchGoogleData(cityName).enqueue(new Callback<GoogleData>() {
             @Override
             public void onResponse(Call<GoogleData> call, Response<GoogleData> response) {
                 view.hideHomeActivityProgressBar();
+                if (response.body().getResults().size() == 0) {
+                    view.disableSearchCityButton();
+                    view.disableSearchWeatherButton();
+                    view.showErrorImageView();
+                    view.showCityNotFoundErrorMessage();
+                    return;
+                }
+
                 if (response.errorBody() == null &&
-                        response.raw().code() == 200 &&
-                        response.body().getStatus().getStatusName().equals("OK")) {
+                        response.raw().code() == 200) {
 
                     GoogleData googleData = response.body();
                     Location location = googleData.getResults().get(0).getGeometry().getLocation();
                     String address = googleData.getResults().get(0).getFormattedAddress();
 
-                    view.enableSearchCityButton();
+                    view.disableSearchCityButton();
                     view.enableSearchWeatherButton();
                     view.showSuccessMessage(address);
                     view.setLocation(location);
                 } else {
                     view.disableSearchCityButton();
+                    view.disableSearchWeatherButton();
+                    view.showErrorImageView();
                     view.showErrorMessage(response.body().getErrorMessage());
                 }
             }
@@ -66,14 +77,17 @@ public class HomeActivityPresenter implements IHomePresenter {
             @Override
             public void onFailure(Call<GoogleData> call, Throwable t) {
                 view.hideHomeActivityProgressBar();
+                view.showErrorImageView();
                 view.showErrorMessage(t.getMessage());
                 view.disableSearchCityButton();
+                view.disableSearchWeatherButton();
             }
         });
     }
 
     @Override
     public void fetchWeatherFromOpenWeather(double lat, double lon, String appid) {
+        view.hideCheckImageView();
         view.showHomeActivityProgressBar();
         openWeatherApi.fetchWeatherData(lat,lon,appid).enqueue(new Callback<WeatherData>() {
             @Override
@@ -85,20 +99,26 @@ public class HomeActivityPresenter implements IHomePresenter {
 
                     WeatherData weatherData = response.body();
                     weatherData.getWeatherItems();
-                    view.enableSearchCityButton();
-                    view.enableSearchWeatherButton();
+                    view.disableSearchCityButton();
+                    view.disableSearchCityButton();
                     weatherDataTransfer = WeatherDataTransfer.getInstance();
                     weatherDataTransfer.setWeatherData(weatherData);
                     view.startNewActivity();
                 } else {
                     view.disableSearchCityButton();
+                    view.disableSearchWeatherButton();
+                    view.showErrorImageView();
                     view.showErrorMessage(response.body().getMessage());
                 }
             }
 
             @Override
             public void onFailure(Call<WeatherData> call, Throwable t) {
-                int a = 2;
+                view.hideHomeActivityProgressBar();
+                view.disableSearchCityButton();
+                view.disableSearchWeatherButton();
+                view.showErrorImageView();
+                view.showErrorMessage(t.getMessage());
             }
         });
     }

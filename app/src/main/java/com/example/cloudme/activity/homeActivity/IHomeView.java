@@ -10,11 +10,8 @@ public interface IHomeView {
     void showErrorMessage(String message);
     void hideErrorMessage();
     void showCityNotFoundErrorMessage();
-    void hideCityNotFoundErrorMessage();
     void showWeatherNotFoundErrorMessage();
-    void hideWeatherNotFoundErrorMessage();
     void showFieldIsEmptyErrorMessage();
-    void hideFieldIsEmptyErrorMessage();
     void showSuccessMessage(String message);
     void hideSuccessMessage();
     void showHomeActivityProgressBar();
@@ -29,4 +26,6 @@ public interface IHomeView {
     void startNewActivity();
     void showCheckImageView();
     void hideCheckImageView();
+    void showErrorImageView();
+    void hideErrorImageView();
 }

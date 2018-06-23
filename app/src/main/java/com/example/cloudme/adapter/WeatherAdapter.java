@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.cloudme.cloudme.R;
 import com.example.cloudme.service.openWeather.model.WeatherItem;
+import com.example.cloudme.util.TemperatureConverter;
 
 import org.w3c.dom.Text;
 
@@ -40,8 +41,10 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
+        double temperature = TemperatureConverter.convertTemperature(weatherItems.get(position).getMain().getTemp());
+        double temperatureRound = TemperatureConverter.round(temperature, 5);
         holder.dayWeatherItemTextView.setText(position + 1 + ".");
-        holder.temperatureWeatherItemTextView.setText(weatherItems.get(position).getMain().getTemp() + " \u2103");
+        holder.temperatureWeatherItemTextView.setText(temperatureRound + " \u2103");
         holder.humidityWeatherItemTextView.setText(weatherItems.get(position).getMain().getHumidity() + " %");
         holder.dateWeatherItemTextView.setText(weatherItems.get(position).getDateTimeTxt());
         listener = new WeatherItemClickListener(context, weatherItems, position);
