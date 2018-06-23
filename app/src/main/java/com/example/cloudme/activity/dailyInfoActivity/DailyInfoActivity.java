@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.cloudme.cloudme.R;
+import com.example.cloudme.util.RainRounder;
 import com.example.cloudme.util.TemperatureConverter;
 
 import static com.example.cloudme.util.Utils.*;
@@ -19,6 +20,8 @@ public class DailyInfoActivity extends AppCompatActivity {
     private TextView humidityTextView;
     private TextView preassureTextView;
     private TextView windSpeedTextView;
+    private TextView rainTextView;
+    private TextView cloudinaryTextView;
     private ImageView cloudinaryImageView;
 
     @Override
@@ -33,6 +36,8 @@ public class DailyInfoActivity extends AppCompatActivity {
         humidityTextView = findViewById(R.id.humidityWeatherItemTextView);
         preassureTextView = findViewById(R.id.pressureTextView);
         windSpeedTextView = findViewById(R.id.windSpeedTextView);
+        rainTextView = findViewById(R.id.rainTextView);
+        cloudinaryTextView = findViewById(R.id.cloudinaryTextView);
 
         Intent intent = getIntent();
         String cityName = intent.getStringExtra(CITY_NAME);
@@ -45,8 +50,13 @@ public class DailyInfoActivity extends AppCompatActivity {
         double humidity = intent.getDoubleExtra(HUMIDITY, 0);
         double pressure = intent.getDoubleExtra(PRESSURE, 0);
         double windSpeed = intent.getDoubleExtra(WIND_SPEED, 0);
+
         double rain = intent.getDoubleExtra(RAIN, 0);
-        double cloudinary = intent.getDoubleExtra(CLOUDINARY, 0);
+        double rainRound = RainRounder.round(rain, 4);
+
+        int cloudinary = intent.getIntExtra(CLOUDINARY, 0);
+
+
         String[] dateTime = weatherDate.split(" ");
 
         cityTextView.setText(cityName);
@@ -56,5 +66,7 @@ public class DailyInfoActivity extends AppCompatActivity {
         humidityTextView.setText(humidity + " %");
         preassureTextView.setText(pressure + " hPa");
         windSpeedTextView.setText(windSpeed + " m/sec");
+        rainTextView.setText(rainRound + " mm");
+        cloudinaryTextView.setText(cloudinary + " %");
     }
 }

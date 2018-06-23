@@ -25,4 +25,6 @@
     <string name="humidity">Humidity:</string>
     <string name="pressure">Pressure:</string>
     <string name="wind_speed">Wind speed:</string>
+    <string name="rain">Rain:</string>
+    <string name="cloudinary">Cloudinary:</string>
 </resources>

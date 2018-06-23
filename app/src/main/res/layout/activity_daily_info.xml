@@ -12,7 +12,7 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="320dp"
+            android:layout_height="370dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -106,6 +106,28 @@
                             android:textSize="24sp"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintTop_toBottomOf="@+id/pressureLabelTextView" />
+
+                        <TextView
+                            android:id="@+id/rainLabelTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:text="@string/rain"
+                            android:textColor="@color/buttonColor"
+                            android:textSize="24sp"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintTop_toBottomOf="@+id/windSpeedLabelTextView"/>
+
+                        <TextView
+                            android:id="@+id/cloudinaryLabelTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:text="@string/cloudinary"
+                            android:textColor="@color/buttonColor"
+                            android:textSize="24sp"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintTop_toBottomOf="@+id/rainLabelTextView"/>
                 </android.support.constraint.ConstraintLayout>
 
                 <android.support.constraint.ConstraintLayout
@@ -178,6 +200,26 @@
                             android:textColor="@color/buttonColor"
                             android:textSize="24sp"
                             app:layout_constraintTop_toBottomOf="@+id/pressureTextView" />
+
+                        <TextView
+                            android:id="@+id/rainTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="90dp"
+                            android:text="0.1 mm"
+                            android:textColor="@color/buttonColor"
+                            android:textSize="24sp"
+                            app:layout_constraintTop_toBottomOf="@+id/windSpeedTextView" />
+
+                        <TextView
+                            android:id="@+id/cloudinaryTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="90dp"
+                            android:text="60%"
+                            android:textColor="@color/buttonColor"
+                            android:textSize="24sp"
+                            app:layout_constraintTop_toBottomOf="@+id/rainTextView" />
                 </android.support.constraint.ConstraintLayout>
         </android.support.constraint.ConstraintLayout>
     </android.support.constraint.ConstraintLayout>
