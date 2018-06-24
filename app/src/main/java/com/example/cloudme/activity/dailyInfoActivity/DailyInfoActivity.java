@@ -22,7 +22,6 @@ public class DailyInfoActivity extends AppCompatActivity {
     private TextView windSpeedTextView;
     private TextView rainTextView;
     private TextView cloudinaryTextView;
-    private ImageView cloudinaryImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,21 +41,15 @@ public class DailyInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String cityName = intent.getStringExtra(CITY_NAME);
         String weatherDate = intent.getStringExtra(WEATHER_DATE);
-
         double temperature = intent.getDoubleExtra(TEMPERATURE, 0);//Unconverted Temperature in kelvins
         double temperatureConverted = TemperatureConverter.convertTemperature(temperature);//Converted Temperature in celsiums
         double temperatureRounded = TemperatureConverter.round(temperatureConverted, 5);//Rounded Temperature in celsiums
-
         double humidity = intent.getDoubleExtra(HUMIDITY, 0);
         double pressure = intent.getDoubleExtra(PRESSURE, 0);
         double windSpeed = intent.getDoubleExtra(WIND_SPEED, 0);
-
         double rain = intent.getDoubleExtra(RAIN, 0);
         double rainRound = RainRounder.round(rain, 4);
-
         int cloudinary = intent.getIntExtra(CLOUDINARY, 0);
-
-
         String[] dateTime = weatherDate.split(" ");
 
         cityTextView.setText(cityName);
